@@ -49,6 +49,9 @@ int main()
 
         bar(620,10,630,470); // lower boarder width,length
 
+        setfillstyle(SOLID_FILL,GREEN);
+        bar(290,100,300,350); // creating obstacle
+
         setfillstyle(SOLID_FILL,	YELLOW); // initialization food color
 
         if(snakeX[0] == foodX && snakeY[0] == foodY) // checking snake and food is in the same position or not
