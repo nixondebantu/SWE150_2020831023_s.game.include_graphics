@@ -192,7 +192,7 @@ int main()
     // game result
 
     std::cout<<"Your score is : " <<(food-1)*10<<"\n\n";
-    std::cout<<"Game Over !!!\n\n";
+    std::cout<<"Game Over !!!\n\nModified by Nixon Deb Antu\nReg.No.:2020831023\n\n";
     getch();
     return 0;
 }
