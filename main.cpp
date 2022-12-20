@@ -49,7 +49,6 @@ int main()
 
         bar(620,10,630,470); // lower boarder width,length
 
-        setfillstyle(SOLID_FILL,GREEN);
         bar(290,100,300,350); // creating obstacle
 
         setfillstyle(SOLID_FILL,	YELLOW); // initialization food color
@@ -180,9 +179,9 @@ int main()
 
     delay(delayTime);
 
-    // checking bumping in to boundary;
+    // checking bumping in to boundary or obstacle;
 
-    if(snakeX[0] >= 615 || snakeX[0] <=5 || snakeY[0] <= 5|| snakeY[0] >= 455){
+    if(snakeX[0] >= 615 || snakeX[0] <=5 || (snakeX[0] == 290 && snakeY[0]>= 100 && snakeY[0]<= 350) || snakeY[0] <= 5|| snakeY[0] >= 455){
         std::cout<<"Snake bumped into the wall !!\n\n";
         game = false;
     }
