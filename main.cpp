@@ -12,7 +12,6 @@ int main()
 
     int  delayTime = 200;
     int food = 0;        // snake food
-    int body= 500;   // snake body
     int p_dir = 1;     //p_dir = previous direction;
     int length = 1;   // snake game;
     bool game = true;  // declaration a bool variable for the loop
@@ -166,7 +165,8 @@ int main()
     {
         if(snakeX[0] == snakeX[i] && snakeY[0] == snakeY[i])
         {
-            body = i;
+            std::cout<<"Snake bumped into itself !!!\n\n";
+            game = false;
             break;
         }
     }
@@ -177,13 +177,6 @@ int main()
 
     if(snakeX[0] >= 615 || snakeX[0] <=5 || snakeY[0] <= 5|| snakeY[0] >= 455){
         std::cout<<"Snake bumped into the wall !!\n\n";
-        game = false;
-    }
-
-    // checking bumping into body
-
-    if(snakeX[0] == snakeX[body] && snakeY[0] ==  snakeY[body] ){
-        std::cout<<"Snake bumped into itself !!!\n\n";
         game = false;
     }
 
