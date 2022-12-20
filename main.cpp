@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 #include<graphics.h>
 #include<time.h>
-char score[15];
+char score[15],x[15];
 
 
 int main()
@@ -37,17 +37,19 @@ int main()
         bar(0,0,630,470);  //  initializing background size or wide (lower width 630 and right length 470)
 
         sprintf(score, "SCORE: %d", (food-1)*10);   // convert int value into string
+        sprintf(x, "LIFE: %d", game);   // convert int value into string
         outtextxy(0, 0, score); // display live score in top left
+        outtextxy(580, 0, x); // display life remaining in top right
 
         setfillstyle(SOLID_FILL,GREEN);  // initializing boarder color
 
-        bar(80,0,630,10); // upper boarder width,length
+        bar(80,0,575,10); // upper boarder width,length
 
         bar(0,20,10,470); // right boarder width,length
 
         bar(0,470,630,460); // lower boarder width,length
 
-        bar(620,10,630,470); // lower boarder width,length
+        bar(620,20,630,470); // lower boarder width,length
 
         bar(290,100,300,350); // creating obstacle
 
