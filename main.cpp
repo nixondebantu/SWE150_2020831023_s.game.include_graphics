@@ -93,16 +93,16 @@ int main()
 
         // condition for key direction
 
-        if(GetAsyncKeyState(VK_RIGHT)||GetAsyncKeyState('D')){
+        if((GetAsyncKeyState(VK_RIGHT)||GetAsyncKeyState('D'))&&p_dir!=2){
             key_dir = 1;
         }
-        else if(GetAsyncKeyState(VK_LEFT)||GetAsyncKeyState('A')){
+        else if((GetAsyncKeyState(VK_LEFT)||GetAsyncKeyState('A'))&&p_dir!=1){
             key_dir = 2;
         }
-        else if(GetAsyncKeyState(VK_UP)||GetAsyncKeyState('W')){
+        else if((GetAsyncKeyState(VK_UP)||GetAsyncKeyState('W'))&&p_dir!=4){
             key_dir = 3;
         }
-        else if(GetAsyncKeyState(VK_DOWN)||GetAsyncKeyState('S')){
+        else if((GetAsyncKeyState(VK_DOWN)||GetAsyncKeyState('S'))&&p_dir!=3){
             key_dir = 4;
         }
         else {
