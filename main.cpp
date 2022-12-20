@@ -15,17 +15,17 @@ int main()
     int food = 0;        // snake food
     int p_dir = 1;     //p_dir = previous direction;
     int length = 1;   // snake game;
-    bool game = true;  // declaration a bool variable for the loop
+    int game = 3;  // declaration a variable for the life
 
+    foodX = 200, foodY = 200; // starting position of food
     // snake array
-
+        init:
         snakeX[200] = {0};
         snakeY[200] = {0};
 
     // initialization for display snake ;
 
     snakeX[0] = 200,snakeY[0] = 200; // starting position of the snake
-    foodX = 200, foodY = 200; // starting position of food
     key_dir = rand()%2;
 
 
@@ -172,7 +172,8 @@ int main()
         if(snakeX[0] == snakeX[i] && snakeY[0] == snakeY[i])
         {
             std::cout<<"Snake bumped into itself !!!\n\n";
-            game = false;
+            game--;
+            goto init;
             break;
         }
     }
@@ -182,8 +183,8 @@ int main()
     // checking bumping in to boundary or obstacle;
 
     if(snakeX[0] >= 615 || snakeX[0] <=5 || (snakeX[0] == 290 && snakeY[0]>= 100 && snakeY[0]<= 350) || snakeY[0] <= 5|| snakeY[0] >= 455){
-        std::cout<<"Snake bumped into the wall !!\n\n";
-        game = false;
+        game--;
+        goto init;
     }
 
     }
