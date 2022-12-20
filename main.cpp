@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 #include<graphics.h>
 #include<time.h>
+char score[15];
 
 
 int main()
@@ -35,11 +36,14 @@ int main()
         setfillstyle(SOLID_FILL,BLACK); // initialization back ground color
         bar(0,0,630,470);  //  initializing background size or wide (lower width 630 and right length 470)
 
+        sprintf(score, "SCORE: %d", (food-1)*10);   // convert int value into string
+        outtextxy(0, 0, score); // display live score in top left
+
         setfillstyle(SOLID_FILL,GREEN);  // initializing boarder color
 
-        bar(0,0,630,10); // upper boarder width,length
+        bar(80,0,630,10); // upper boarder width,length
 
-        bar(0,0,10,470); // right boarder width,length
+        bar(0,20,10,470); // right boarder width,length
 
         bar(0,470,630,460); // lower boarder width,length
 
